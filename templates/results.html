@@ -1,0 +1,25 @@
+{% extends "layout.html" %} <!-- retrieve layout -->
+{% block content %} <!-- lines up with the "block content" in layout.html -->
+<div class="page-content">
+{% if projects %}
+    <!-- uncomment this in next sprint <p>{{ projects | length }} results found</p> -->
+    {% for project in projects %}
+    <div class="result">
+        <p>ID: {{ project.get('ID') }}</p>
+        <p>Name: {{ project.get('name') }}</p>
+        <p>Category: {{ project.get('category') }}</p>
+        <p>Main category: {{ project.get('main_category') }}</p>
+        <p>Amount pledged: {{ project.get('pledged') }} {{ project.get('currency') }}</p>
+        <p>Deadline: {{ project.get('deadline') }}</p>
+        <p>Goal: {{ project.get('goal')|int }} {{ project.get('currency') }}</p>
+        <p>Launched: {{ project.get('launched') }}</p>
+        <p>State: {{ project.get('state') }}</p>
+        <p>Backers: {{ project.get('backers') }}</p>
+        <p>Country: {{ project.get('country') }}</p>
+    </div>
+    {% endfor %}
+{% else %}
+    <p>{{ message }}</p>
+{% endif %}
+</div>
+{% endblock content %} <!-- indicates "block content" is done -->

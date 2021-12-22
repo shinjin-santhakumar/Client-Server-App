@@ -1,0 +1,34 @@
+<!-- html tag starts html -->
+<html>
+   <head>
+      <!-- href is set to look inside the static folder for styles/styles.css -->
+      <link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}">
+      <!-- title is the what the tab of the website will say -->
+      <title>Kickstarter - Data</title>
+   </head>
+   <!-- body tag containes content of html document. Only 1 body allowed -->
+   <body>
+      <!-- navbar starts here -->
+      <ul>
+         <li><a href="/" class = "icon"><img src="{{url_for('static', filename='jar.png')}}" class="icon"></a></li>
+        <!-- <li><a href="/id">ID</a></li>  
+         <li><a href="/name">Name</a></li>  
+         <li><a href="/category">Category</a></li>  
+         <li><a href="/state">State</a></li>  
+         <li><a href="/month">Month</a></li> 
+         <li><a href="/edit">Edit</a></li>
+         <li><a href="/delete">Delete</a></li>     
+         <li><a href="/add">Add</a></li> -->
+         <li><a href="/search">Search</a></li> 
+         <li><a href="/update_ks_route">Update Kickstarter</a></li> 
+         <li><a href="/analytics">Analytics</a></li> 
+         <li><a href="/update_database">Backup</a></li> 
+         <li><a href="/import_file">Import</a></li>
+         <!--<li><a href="/analytic_length">My_v_Analytics</a></li> -->
+      </ul>
+      <!-- this allows the rest of website to be changed in different files -->
+      {% block content %}{% endblock %}
+      <!-- this allows the rest of website to be changed in different files -->
+
+   </body>
+</html>

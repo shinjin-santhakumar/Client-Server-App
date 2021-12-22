@@ -1,0 +1,42 @@
+<!-- html tag starts html -->
+<!DOCTYPE html>
+<html lang="en">
+
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title> The Jarss Analyzing Kickstarter Data</title>
+      <link rel="stylesheet" href="{{ url_for('static', filename='homepage.css') }}">
+   </head>
+
+   <div class = "navbar">
+      <div class="container">
+          <a class="logo" href="#"> The<span> Jarss</span></a>
+      </div>
+  </div>
+    <!-- body tag containes content of html document. Only 1 body allowed -->
+   <body>
+       <!-- form tag allows for user input. -->
+       <!-- "action" says what url to go after form completed.(blank means stay on current page) -->
+       <!-- "method" can be "get" or "post". Since post is html it is what we will be using -->
+       <form class = "search-bar" action = "" method = "post">
+         <!-- p tag represents a paragraph.(seperate block of text) -->
+         <!--div class="input">
+         </div-->
+          <label for="Search">Search:</label><br>
+          <input type="text" name="nm" size="30" placeholder="Search..." class="search-input">
+          <label for="category">Category:</label><br>
+          <input type="text" name="category" placeholder="Category..." class="category-input"><br>
+          <input type="submit" value="Submit">
+
+          <!--<div class="input2">
+            <input type="text" name="nm11" size="50" placeholder="Search...">
+          </div>
+
+          <input type="text" name="cat" size="50" placeholder="Search..." class="search-input"-->
+
+      </form> 
+
+   </body>
+</html>

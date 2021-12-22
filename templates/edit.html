@@ -1,0 +1,61 @@
+{% extends "layout.html" %} <!-- retrieve layout -->
+{% block content %} <!-- lines up with the "block content" in layout.html -->
+<div class="page-content">
+   <form id="editForm"action="" method="POST">
+      <!-- p tag represents a paragraph.(seperate block of text) -->
+      <!-- input is how we get forms from users -->
+      <!-- "type" how we are recieving input.("submit is a button, text is a bar") -->
+      <!-- "name" the name of the text request.form looks for -->
+      <fieldset>
+      <p>ID of project that will be edited: <input type="number" name="id_to_edit" min="1" oninput="validity.valid||(value='');"></p>
+      <br>
+      <p>New ID: <input type="number" name="new_id" min="1" oninput="validity.valid||(value='');"></p>
+      <p>New name: <input type="text" name="new_name"></p>
+      <p>New category: <input type="text" name="new_category"></p>
+      <label for="new_main_category">New main category:</label>
+      <select name="new_main_category">
+         <option value="\n" selected disabled hidden>Choose here</option>
+         <option value="Games">Games</option>
+         <option value="Design">Design</option>
+         <option value="Technology">Technology</option>
+         <option value="Film & Video">Film & Video</option>
+         <option value="Music">Music</option>
+         <option value="Publishing">Publishing</option>
+         <option value="Fashion">Fashion</option>
+         <option value="Food">Food</option>
+         <option value="Art">Art</option>
+         <option value="Comics">Comics</option>
+         <option value="Photography">Photography</option>
+         <option value="Theater">Theater</option>
+         <option value="Crafts">Crafts</option>
+         <option value="Journalism">Journalism</option>
+         <option value="Dance">Dance</option>
+      </select>
+      <label for="new_currency">New currency:</label>
+      <select name="new_currency">
+         <option value="\n" selected disabled hidden>Choose here</option>
+         <option value="USD">USD</option>
+         <option value="GBP">GBP</option>
+         <option value="CAD">CAD</option>
+         <option value="EUR">EUR</option>
+         <option value="AUD">AUD</option>
+      </select>
+      <p>New deadline: <input type="date" name="new_deadline"></p>
+      <p>New goal: <input type="number" name="new_goal" min="1" oninput="validity.valid||(value='');"></p>
+      <p>New launched: <input type="datetime-local" name="new_launched" step=1></p>
+      <p>New pledged: <input type="number" name="new_pledged" min="0"></p> 
+      <label for="new_state">New state:</label>
+      <select name="new_state">
+         <option value="\n" selected disabled hidden>Choose here</option>
+         <option value="failed">Failed</option>
+         <option value="successful">Successful</option>
+         <option value="canceled">Canceled</option>
+         <option value="live">Live</option>
+      </select>
+      <p>New backers: <input type="number" name="new_backers" min="0" oninput="validity.valid||(value='');"></p>
+      <p>New country: <input type="text" name="new_country"></p>
+      <p><input type="button"  class="button_v1" value = "Submit" onclick="document.getElementById('editForm').submit();"> </p>
+    </fieldset>
+   </form>
+</div>
+{% endblock content %} <!-- indicates "block content" is done -->

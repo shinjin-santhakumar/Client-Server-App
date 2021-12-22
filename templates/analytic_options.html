@@ -1,0 +1,20 @@
+{% extends "layout.html" %} <!-- retrieve layout -->
+{% block content %} <!-- lines up with the "block content" in layout.html -->
+<div class="page-content">
+   <form action="" method="POST">
+      <!-- p tag represents a paragraph.(seperate block of text) -->
+      <p>Select Search Field:</p>
+      <!-- input is how we get forms from users -->
+      <!-- "type" how we are recieving input.("submit is a button, text is a bar") -->
+      <!-- "name" the name of the text request.form looks for -->
+      <p><input type="button" class="button_v1_width_350" value = "Average Length of a Kickstarter" onclick="window.location.href = '/analytic_avg_length_ks';"></p>
+      <p><input type="button" class="button_v1_width_350" value="Category Most Likely to Fail"  onclick="window.location.href = '/analytic_likely_fail';"></p>
+      <p><input type="button" class="button_v1_width_350"  value="Most Funded Category"  onclick="window.location.href = '/analytics_most_funded_category';"></p>
+      <p><input type="button"  class="button_v1_width_350" value="Most Popular Month to Start a Kickstarter" onclick="window.location.href = '/analytics_popmonth';"></p>
+      <p><input type="button" class="button_v1_width_350"  value="Most Popular Catagory Each Month"  onclick="window.location.href = '/analytics_popcat';"></p>
+      <p><input type="button" class="button_v1_width_350" value="Most Ambitious Project Each Month"  onclick="window.location.href = '/analytics_ambitious';"></p>
+      <p><input type="button" class="button_v1_width_350" value="Most Popular Catagory Each Country"  onclick="window.location.href = '/analytics_popnation';"></p>
+      <p><input type="button" class="button_v1_width_350" value="Reocurring words in successful Kickstarters"  onclick="window.location.href = '/success_words';"></p>
+   </form>
+</div>
+{% endblock content %} <!-- indicates "block content" is done -->

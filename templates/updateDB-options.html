@@ -1,0 +1,15 @@
+{% extends "layout.html" %} <!-- retrieve layout -->
+{% block content %} <!-- lines up with the "block content" in layout.html -->
+<div class="page-content">
+   <form action="" method="POST">
+      <!-- p tag represents a paragraph.(seperate block of text) -->
+      <p> Select Update option:</p>
+      <!-- input is how we get forms from users -->
+      <!-- "type" how we are recieving input.("submit is a button, text is a bar") -->
+      <!-- "name" the name of the text request.form looks for -->
+      <p><input type="button"  class="button_v1_width_200" value = "Edit" name="Edit" onclick="window.location.href = '/edit';"></p>
+      <p><input type="button"  class="button_v1_width_200" value="Add" name="Add" onclick="window.location.href = '/add';"></p>
+      <p><input type="button"  class="button_v1_width_200" value="Delete" name = "Delete" onclick="window.location.href = '/delete';"></p>
+   </form>
+</div>
+{% endblock content %} <!-- indicates "block content" is done -->

@@ -1,0 +1,17 @@
+{% extends "layout.html" %} <!-- retrieve layout -->
+{% block content %} <!-- lines up with the "block content" in layout.html -->
+<div class="page-content">
+   <form id="deleteForm"action="" method="POST">
+      <!-- p tag represents a paragraph.(seperate block of text) -->
+      <fieldset>
+      <legend>Please enter the ID of the Kickstarter you wish to delete:</legend> 
+      <!-- input is how we get forms from users -->
+      <!-- "type" how we are recieving input.("submit is a button, text is a bar") -->
+      <!-- "name" the name of the text request.form looks for -->
+      <p><input type="number" name="id_to_delete"></p>
+      <p><input type="button" class="button_v1"  value = "Submit" onclick="document.getElementById('deleteForm').submit();"> </p>
+      <p>Please allow some time for the database to update after submitting!</p>
+    </fieldset>
+   </form>
+</div>
+{% endblock content %} <!-- indicates "block content" is done -->

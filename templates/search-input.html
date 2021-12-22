@@ -1,0 +1,16 @@
+{% extends "layout.html" %} <!-- retrieve layout -->
+{% block content %} <!-- lines up with the "block content" in layout.html -->
+<div class="page-content">
+   <form id="searchForm" action="" method="POST">
+      <!-- p tag represents a paragraph.(seperate block of text) -->
+      <fieldset >
+      <p>Search by {{ name }}:</p>
+      <!-- input is how we get forms from users -->
+      <!-- "type" how we are recieving input.("submit is a button, text is a bar") -->
+      <!-- "name" the name of the text request.form looks for -->
+      <p><input type="{{ type }}" name="{{ name }}"></p>
+      <p><input type="button"  class="button_v1" value = "Submit" onclick="document.getElementById('searchForm').submit();"> </p>
+    </fieldset>
+   </form>
+</div>
+{% endblock content %} <!-- indicates "block content" is done -->

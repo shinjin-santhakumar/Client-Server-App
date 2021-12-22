@@ -1,0 +1,62 @@
+{% extends "layout.html" %} <!-- retrieve layout -->
+{% block content %} <!-- lines up with the "block content" in layout.html -->
+<div class="page-content">
+   <form id="addForm"action="" method="POST">
+      <fieldset> 
+      <legend>Add Kickstarter </legend>
+      <!-- p tag represents a paragraph.(seperate block of text) -->
+      <!-- input is how we get forms from users -->
+      <!-- "type" how we are recieving input.("submit is a button, text is a bar") -->
+      <!-- "name" the name of the text request.form looks for -->
+      <p>Please Enter:</p>
+
+      <label>ID </label><br>
+      <p><input type="number" name="id"></p>
+      
+      <label>Name</label>
+      <p><input type="text" name="name"></p>
+      
+      <label>Category</label>
+      <p><input type="text" name="category"></p>
+
+      <label>Main Category</label>
+      <p><input type="text" name="main_category"></p>
+
+      <label>Currency</label>
+      <p><input type="text" name="currency"></p>
+
+      <label>Deadline</label>
+      <p><input type="date" name="deadline"></p>
+
+      <label>Date Launched</label>
+      <p><input type="date" name="date_launched"> </p>
+
+      <p><input type="time" step = "1" name="time_launched"> </p>
+
+      <label>Goal</label>
+      <p><input type="number" name="goal"> </p>
+
+      <label>Number Pledged</label>
+      <p><input type="number" name="number_pledged"></p>
+
+      <label>State</label>
+      <p><input type="state" name="state"></p>
+
+      <label>Number Backers</label>
+      <p><input type="number" name="number_backers"></p>
+
+      <label>Country</label>
+      <p><input type="text" name="country"></p>
+
+      <label>Amount USD Pledged</label>
+      <p><input type="number" name="amount_usd_pledged"></p>
+
+      <label>Amount real USD Pledged</label>
+      <p><input type="number" name="amount_usd_pledged_real"></p>
+
+      <p><input type="button" class="button_v1" value = "Submit" onclick="document.getElementById('addForm').submit();"> </p>
+      </fieldset> 
+    
+   </form>
+</div>
+{% endblock content %} <!-- indicates "block content" is done -->
